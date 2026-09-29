@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>방명록</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>방명록</h1>
+      <p class="muted">한마디 남겨 주세요.</p>
+    </header>
+
+    <form id="entry-form" class="card" novalidate>
+      <label for="content" class="sr-only">내용</label>
+      <textarea id="content" name="content" rows="4" maxlength="500" placeholder="내용을 입력하세요"></textarea>
+      <div class="form-footer">
+        <span id="char-count" class="muted">0 / 500</span>
+        <button type="submit" id="submit-btn">저장</button>
+      </div>
+    </form>
+
+    <p id="message" class="message" role="alert" hidden></p>
+
+    <section>
+      <h2>글 목록 <span id="entry-count" class="muted"></span></h2>
+      <p id="status" class="muted">불러오는 중…</p>
+      <ul id="entry-list" class="entry-list"></ul>
+    </section>
+  </main>
+</body>
+</html>
